@@ -1,0 +1,11 @@
+@theme {
+  --color-coach-bg: #f5f6f6;
+}
+
+.raleway-font {
+  font-family: "Raleway", sans-serif;
+}
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+}
