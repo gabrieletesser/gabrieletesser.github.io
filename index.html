@@ -1,864 +1,1416 @@
 <!DOCTYPE html>
 <!-- saved from url=(0022)http://localhost:8080/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="description" content="Coach is a unique learning platform that turns employee training into a daily activity through short lessons and interactive learning games. With just 5-10 minutes a day, Coach enables employees to build skills, reinforce knowledge, and drive continuous growth.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Get Coach App</title><script src="./Get Coach App_files/browser@4"></script><style>/*! tailwindcss v4.1.7 | MIT License | https://tailwindcss.com */
-@layer properties;
-@layer theme, base, components, utilities;
-@layer theme {
-  :root, :host {
-    --font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-    'Noto Color Emoji';
-    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
-    monospace;
-    --color-yellow-500: oklch(79.5% 0.184 86.047);
-    --color-yellow-700: oklch(55.4% 0.135 66.442);
-    --color-gray-400: oklch(70.7% 0.022 261.325);
-    --color-gray-600: oklch(44.6% 0.03 256.802);
-    --color-gray-800: oklch(27.8% 0.033 256.848);
-    --color-black: #000;
-    --color-white: #fff;
-    --spacing: 0.25rem;
-    --text-sm: 0.875rem;
-    --text-sm--line-height: calc(1.25 / 0.875);
-    --text-lg: 1.125rem;
-    --text-lg--line-height: calc(1.75 / 1.125);
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
-    --text-8xl: 6rem;
-    --text-8xl--line-height: 1;
-    --font-weight-light: 300;
-    --font-weight-bold: 700;
-    --leading-tight: 1.25;
-    --radius-4xl: 2rem;
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    --default-font-family: var(--font-sans);
-    --default-mono-font-family: var(--font-mono);
-  }
-}
-@layer base {
-  *, ::after, ::before, ::backdrop, ::file-selector-button {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0 solid;
-  }
-  html, :host {
-    line-height: 1.5;
-    -webkit-text-size-adjust: 100%;
-    tab-size: 4;
-    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji');
-    font-feature-settings: var(--default-font-feature-settings, normal);
-    font-variation-settings: var(--default-font-variation-settings, normal);
-    -webkit-tap-highlight-color: transparent;
-  }
-  hr {
-    height: 0;
-    color: inherit;
-    border-top-width: 1px;
-  }
-  abbr:where([title]) {
-    -webkit-text-decoration: underline dotted;
-    text-decoration: underline dotted;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;
-    font-weight: inherit;
-  }
-  a {
-    color: inherit;
-    -webkit-text-decoration: inherit;
-    text-decoration: inherit;
-  }
-  b, strong {
-    font-weight: bolder;
-  }
-  code, kbd, samp, pre {
-    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
-    font-feature-settings: var(--default-mono-font-feature-settings, normal);
-    font-variation-settings: var(--default-mono-font-variation-settings, normal);
-    font-size: 1em;
-  }
-  small {
-    font-size: 80%;
-  }
-  sub, sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-  }
-  sub {
-    bottom: -0.25em;
-  }
-  sup {
-    top: -0.5em;
-  }
-  table {
-    text-indent: 0;
-    border-color: inherit;
-    border-collapse: collapse;
-  }
-  :-moz-focusring {
-    outline: auto;
-  }
-  progress {
-    vertical-align: baseline;
-  }
-  summary {
-    display: list-item;
-  }
-  ol, ul, menu {
-    list-style: none;
-  }
-  img, svg, video, canvas, audio, iframe, embed, object {
-    display: block;
-    vertical-align: middle;
-  }
-  img, video {
-    max-width: 100%;
-    height: auto;
-  }
-  button, input, select, optgroup, textarea, ::file-selector-button {
-    font: inherit;
-    font-feature-settings: inherit;
-    font-variation-settings: inherit;
-    letter-spacing: inherit;
-    color: inherit;
-    border-radius: 0;
-    background-color: transparent;
-    opacity: 1;
-  }
-  :where(select:is([multiple], [size])) optgroup {
-    font-weight: bolder;
-  }
-  :where(select:is([multiple], [size])) optgroup option {
-    padding-inline-start: 20px;
-  }
-  ::file-selector-button {
-    margin-inline-end: 4px;
-  }
-  ::placeholder {
-    opacity: 1;
-  }
-  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
-    ::placeholder {
-      color: currentcolor;
-      @supports (color: color-mix(in lab, red, red)) {
-        color: color-mix(in oklab, currentcolor 50%, transparent);
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description"
+    content="Coach is a unique learning platform that turns employee training into a daily activity through short lessons and interactive learning games. With just 5-10 minutes a day, Coach enables employees to build skills, reinforce knowledge, and drive continuous growth.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Coach App</title>
+  <script src="./Get Coach App_files/browser@4"></script>
+  <style>
+    /*! tailwindcss v4.1.7 | MIT License | https://tailwindcss.com */
+    @layer properties;
+    @layer theme, base, components, utilities;
+
+    @layer theme {
+
+      :root,
+      :host {
+        --font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+          'Noto Color Emoji';
+        --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+          monospace;
+        --color-yellow-500: oklch(79.5% 0.184 86.047);
+        --color-yellow-700: oklch(55.4% 0.135 66.442);
+        --color-gray-400: oklch(70.7% 0.022 261.325);
+        --color-gray-600: oklch(44.6% 0.03 256.802);
+        --color-gray-800: oklch(27.8% 0.033 256.848);
+        --color-black: #000;
+        --color-white: #fff;
+        --spacing: 0.25rem;
+        --text-sm: 0.875rem;
+        --text-sm--line-height: calc(1.25 / 0.875);
+        --text-lg: 1.125rem;
+        --text-lg--line-height: calc(1.75 / 1.125);
+        --text-xl: 1.25rem;
+        --text-xl--line-height: calc(1.75 / 1.25);
+        --text-2xl: 1.5rem;
+        --text-2xl--line-height: calc(2 / 1.5);
+        --text-3xl: 1.875rem;
+        --text-3xl--line-height: calc(2.25 / 1.875);
+        --text-8xl: 6rem;
+        --text-8xl--line-height: 1;
+        --font-weight-light: 300;
+        --font-weight-bold: 700;
+        --leading-tight: 1.25;
+        --radius-4xl: 2rem;
+        --default-transition-duration: 150ms;
+        --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        --default-font-family: var(--font-sans);
+        --default-mono-font-family: var(--font-mono);
       }
     }
-  }
-  textarea {
-    resize: vertical;
-  }
-  ::-webkit-search-decoration {
-    -webkit-appearance: none;
-  }
-  ::-webkit-date-and-time-value {
-    min-height: 1lh;
-    text-align: inherit;
-  }
-  ::-webkit-datetime-edit {
-    display: inline-flex;
-  }
-  ::-webkit-datetime-edit-fields-wrapper {
-    padding: 0;
-  }
-  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
-    padding-block: 0;
-  }
-  :-moz-ui-invalid {
-    box-shadow: none;
-  }
-  button, input:where([type='button'], [type='reset'], [type='submit']), ::file-selector-button {
-    appearance: button;
-  }
-  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
-    height: auto;
-  }
-  [hidden]:where(:not([hidden='until-found'])) {
-    display: none !important;
-  }
-}
-@layer utilities {
-  .fixed {
-    position: fixed;
-  }
-  .relative {
-    position: relative;
-  }
-  .right-1 {
-    right: calc(var(--spacing) * 1);
-  }
-  .bottom-1 {
-    bottom: calc(var(--spacing) * 1);
-  }
-  .bottom-4 {
-    bottom: calc(var(--spacing) * 4);
-  }
-  .z-10 {
-    z-index: 10;
-  }
-  .mx-2 {
-    margin-inline: calc(var(--spacing) * 2);
-  }
-  .mx-auto {
-    margin-inline: auto;
-  }
-  .mr-2 {
-    margin-right: calc(var(--spacing) * 2);
-  }
-  .mr-4 {
-    margin-right: calc(var(--spacing) * 4);
-  }
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
-  }
-  .mb-4 {
-    margin-bottom: calc(var(--spacing) * 4);
-  }
-  .mb-8 {
-    margin-bottom: calc(var(--spacing) * 8);
-  }
-  .block {
-    display: block;
-  }
-  .flex {
-    display: flex;
-  }
-  .grid {
-    display: grid;
-  }
-  .hidden {
-    display: none;
-  }
-  .h-10 {
-    height: calc(var(--spacing) * 10);
-  }
-  .h-12 {
-    height: calc(var(--spacing) * 12);
-  }
-  .h-32 {
-    height: calc(var(--spacing) * 32);
-  }
-  .h-fit {
-    height: fit-content;
-  }
-  .min-h-screen {
-    min-height: 100vh;
-  }
-  .w-1\/2 {
-    width: calc(1/2 * 100%);
-  }
-  .w-1\/3 {
-    width: calc(1/3 * 100%);
-  }
-  .w-3\/4 {
-    width: calc(3/4 * 100%);
-  }
-  .w-10 {
-    width: calc(var(--spacing) * 10);
-  }
-  .w-32 {
-    width: calc(var(--spacing) * 32);
-  }
-  .w-\[50px\] {
-    width: 50px;
-  }
-  .w-full {
-    width: 100%;
-  }
-  .flex-1 {
-    flex: 1;
-  }
-  .rotate-90 {
-    rotate: 90deg;
-  }
-  .grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-  .grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .flex-col {
-    flex-direction: column;
-  }
-  .flex-col-reverse {
-    flex-direction: column-reverse;
-  }
-  .flex-row {
-    flex-direction: row;
-  }
-  .flex-row-reverse {
-    flex-direction: row-reverse;
-  }
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
-  .content-center {
-    align-content: center;
-  }
-  .items-center {
-    align-items: center;
-  }
-  .items-start {
-    align-items: flex-start;
-  }
-  .justify-around {
-    justify-content: space-around;
-  }
-  .justify-center {
-    justify-content: center;
-  }
-  .justify-end {
-    justify-content: flex-end;
-  }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
-  }
-  .gap-4 {
-    gap: calc(var(--spacing) * 4);
-  }
-  .gap-12 {
-    gap: calc(var(--spacing) * 12);
-  }
-  .gap-24 {
-    gap: calc(var(--spacing) * 24);
-  }
-  .rounded-full {
-    border-radius: calc(infinity * 1px);
-  }
-  .rounded-t-4xl {
-    border-top-left-radius: var(--radius-4xl);
-    border-top-right-radius: var(--radius-4xl);
-  }
-  .rounded-b-4xl {
-    border-bottom-right-radius: var(--radius-4xl);
-    border-bottom-left-radius: var(--radius-4xl);
-  }
-  .border-2 {
-    border-style: var(--tw-border-style);
-    border-width: 2px;
-  }
-  .border-black {
-    border-color: var(--color-black);
-  }
-  .border-yellow-500 {
-    border-color: var(--color-yellow-500);
-  }
-  .bg-\[\#f5f6f6\] {
-    background-color: #f5f6f6;
-  }
-  .bg-gray-800 {
-    background-color: var(--color-gray-800);
-  }
-  .bg-white {
-    background-color: var(--color-white);
-  }
-  .bg-yellow-500 {
-    background-color: var(--color-yellow-500);
-  }
-  .p-4 {
-    padding: calc(var(--spacing) * 4);
-  }
-  .px-4 {
-    padding-inline: calc(var(--spacing) * 4);
-  }
-  .px-12 {
-    padding-inline: calc(var(--spacing) * 12);
-  }
-  .py-2 {
-    padding-block: calc(var(--spacing) * 2);
-  }
-  .py-6 {
-    padding-block: calc(var(--spacing) * 6);
-  }
-  .py-8 {
-    padding-block: calc(var(--spacing) * 8);
-  }
-  .py-12 {
-    padding-block: calc(var(--spacing) * 12);
-  }
-  .py-24 {
-    padding-block: calc(var(--spacing) * 24);
-  }
-  .pt-24 {
-    padding-top: calc(var(--spacing) * 24);
-  }
-  .pb-24 {
-    padding-bottom: calc(var(--spacing) * 24);
-  }
-  .text-center {
-    text-align: center;
-  }
-  .text-right {
-    text-align: right;
-  }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .text-lg {
-    font-size: var(--text-lg);
-    line-height: var(--tw-leading, var(--text-lg--line-height));
-  }
-  .text-sm {
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
-  }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
-  }
-  .font-light {
-    --tw-font-weight: var(--font-weight-light);
-    font-weight: var(--font-weight-light);
-  }
-  .text-gray-400 {
-    color: var(--color-gray-400);
-  }
-  .text-gray-600 {
-    color: var(--color-gray-600);
-  }
-  .text-white {
-    color: var(--color-white);
-  }
-  .text-yellow-500 {
-    color: var(--color-yellow-500);
-  }
-  .uppercase {
-    text-transform: uppercase;
-  }
-  .italic {
-    font-style: italic;
-  }
-  .shadow-lg {
-    --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-md {
-    --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .transition-all {
-    transition-property: all;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-  }
-  .duration-200 {
-    --tw-duration: 200ms;
-    transition-duration: 200ms;
-  }
-  .before\:absolute {
-    &::before {
-      content: var(--tw-content);
-      position: absolute;
-    }
-  }
-  .before\:top-0 {
-    &::before {
-      content: var(--tw-content);
-      top: calc(var(--spacing) * 0);
-    }
-  }
-  .before\:left-0 {
-    &::before {
-      content: var(--tw-content);
-      left: calc(var(--spacing) * 0);
-    }
-  }
-  .before\:h-10 {
-    &::before {
-      content: var(--tw-content);
-      height: calc(var(--spacing) * 10);
-    }
-  }
-  .before\:w-10 {
-    &::before {
-      content: var(--tw-content);
-      width: calc(var(--spacing) * 10);
-    }
-  }
-  .before\:-translate-x-full {
-    &::before {
-      content: var(--tw-content);
-      --tw-translate-x: -100%;
-      translate: var(--tw-translate-x) var(--tw-translate-y);
-    }
-  }
-  .before\:-translate-y-1\/4 {
-    &::before {
-      content: var(--tw-content);
-      --tw-translate-y: calc(calc(1/4 * 100%) * -1);
-      translate: var(--tw-translate-x) var(--tw-translate-y);
-    }
-  }
-  .before\:text-center {
-    &::before {
-      content: var(--tw-content);
-      text-align: center;
-    }
-  }
-  .before\:text-8xl {
-    &::before {
-      content: var(--tw-content);
-      font-size: var(--text-8xl);
-      line-height: var(--tw-leading, var(--text-8xl--line-height));
-    }
-  }
-  .before\:leading-tight {
-    &::before {
-      content: var(--tw-content);
-      --tw-leading: var(--leading-tight);
-      line-height: var(--leading-tight);
-    }
-  }
-  .before\:text-black {
-    &::before {
-      content: var(--tw-content);
-      color: var(--color-black);
-    }
-  }
-  .before\:text-gray-400 {
-    &::before {
-      content: var(--tw-content);
-      color: var(--color-gray-400);
-    }
-  }
-  .before\:content-\[\'“\'\] {
-    &::before {
-      content: var(--tw-content);
-      --tw-content: '“';
-      content: var(--tw-content);
-    }
-  }
-  .hover\:text-yellow-700 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-yellow-700);
+
+    @layer base {
+
+      *,
+      ::after,
+      ::before,
+      ::backdrop,
+      ::file-selector-button {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: 0 solid;
+      }
+
+      html,
+      :host {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        tab-size: 4;
+        font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji');
+        font-feature-settings: var(--default-font-feature-settings, normal);
+        font-variation-settings: var(--default-font-variation-settings, normal);
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      hr {
+        height: 0;
+        color: inherit;
+        border-top-width: 1px;
+      }
+
+      abbr:where([title]) {
+        -webkit-text-decoration: underline dotted;
+        text-decoration: underline dotted;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+
+      a {
+        color: inherit;
+        -webkit-text-decoration: inherit;
+        text-decoration: inherit;
+      }
+
+      b,
+      strong {
+        font-weight: bolder;
+      }
+
+      code,
+      kbd,
+      samp,
+      pre {
+        font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+        font-feature-settings: var(--default-mono-font-feature-settings, normal);
+        font-variation-settings: var(--default-mono-font-variation-settings, normal);
+        font-size: 1em;
+      }
+
+      small {
+        font-size: 80%;
+      }
+
+      sub,
+      sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+      }
+
+      sub {
+        bottom: -0.25em;
+      }
+
+      sup {
+        top: -0.5em;
+      }
+
+      table {
+        text-indent: 0;
+        border-color: inherit;
+        border-collapse: collapse;
+      }
+
+      :-moz-focusring {
+        outline: auto;
+      }
+
+      progress {
+        vertical-align: baseline;
+      }
+
+      summary {
+        display: list-item;
+      }
+
+      ol,
+      ul,
+      menu {
+        list-style: none;
+      }
+
+      img,
+      svg,
+      video,
+      canvas,
+      audio,
+      iframe,
+      embed,
+      object {
+        display: block;
+        vertical-align: middle;
+      }
+
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+
+      button,
+      input,
+      select,
+      optgroup,
+      textarea,
+      ::file-selector-button {
+        font: inherit;
+        font-feature-settings: inherit;
+        font-variation-settings: inherit;
+        letter-spacing: inherit;
+        color: inherit;
+        border-radius: 0;
+        background-color: transparent;
+        opacity: 1;
+      }
+
+      :where(select:is([multiple], [size])) optgroup {
+        font-weight: bolder;
+      }
+
+      :where(select:is([multiple], [size])) optgroup option {
+        padding-inline-start: 20px;
+      }
+
+      ::file-selector-button {
+        margin-inline-end: 4px;
+      }
+
+      ::placeholder {
+        opacity: 1;
+      }
+
+      @supports (not (-webkit-appearance: -apple-pay-button)) or (contain-intrinsic-size: 1px) {
+        ::placeholder {
+          color: currentcolor;
+
+          @supports (color: color-mix(in lab, red, red)) {
+            color: color-mix(in oklab, currentcolor 50%, transparent);
+          }
+        }
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      ::-webkit-search-decoration {
+        -webkit-appearance: none;
+      }
+
+      ::-webkit-date-and-time-value {
+        min-height: 1lh;
+        text-align: inherit;
+      }
+
+      ::-webkit-datetime-edit {
+        display: inline-flex;
+      }
+
+      ::-webkit-datetime-edit-fields-wrapper {
+        padding: 0;
+      }
+
+      ::-webkit-datetime-edit,
+      ::-webkit-datetime-edit-year-field,
+      ::-webkit-datetime-edit-month-field,
+      ::-webkit-datetime-edit-day-field,
+      ::-webkit-datetime-edit-hour-field,
+      ::-webkit-datetime-edit-minute-field,
+      ::-webkit-datetime-edit-second-field,
+      ::-webkit-datetime-edit-millisecond-field,
+      ::-webkit-datetime-edit-meridiem-field {
+        padding-block: 0;
+      }
+
+      :-moz-ui-invalid {
+        box-shadow: none;
+      }
+
+      button,
+      input:where([type='button'], [type='reset'], [type='submit']),
+      ::file-selector-button {
+        appearance: button;
+      }
+
+      ::-webkit-inner-spin-button,
+      ::-webkit-outer-spin-button {
+        height: auto;
+      }
+
+      [hidden]:where(:not([hidden='until-found'])) {
+        display: none !important;
       }
     }
-  }
-  .hover\:opacity-80 {
-    &:hover {
-      @media (hover: hover) {
-        opacity: 80%;
+
+    @layer utilities {
+      .fixed {
+        position: fixed;
+      }
+
+      .relative {
+        position: relative;
+      }
+
+      .right-1 {
+        right: calc(var(--spacing) * 1);
+      }
+
+      .bottom-1 {
+        bottom: calc(var(--spacing) * 1);
+      }
+
+      .bottom-4 {
+        bottom: calc(var(--spacing) * 4);
+      }
+
+      .z-10 {
+        z-index: 10;
+      }
+
+      .mx-2 {
+        margin-inline: calc(var(--spacing) * 2);
+      }
+
+      .mx-auto {
+        margin-inline: auto;
+      }
+
+      .mr-2 {
+        margin-right: calc(var(--spacing) * 2);
+      }
+
+      .mr-4 {
+        margin-right: calc(var(--spacing) * 4);
+      }
+
+      .mb-2 {
+        margin-bottom: calc(var(--spacing) * 2);
+      }
+
+      .mb-4 {
+        margin-bottom: calc(var(--spacing) * 4);
+      }
+
+      .mb-8 {
+        margin-bottom: calc(var(--spacing) * 8);
+      }
+
+      .block {
+        display: block;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .grid {
+        display: grid;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .h-10 {
+        height: calc(var(--spacing) * 10);
+      }
+
+      .h-12 {
+        height: calc(var(--spacing) * 12);
+      }
+
+      .h-32 {
+        height: calc(var(--spacing) * 32);
+      }
+
+      .h-fit {
+        height: fit-content;
+      }
+
+      .min-h-screen {
+        min-height: 100vh;
+      }
+
+      .w-1\/2 {
+        width: calc(1/2 * 100%);
+      }
+
+      .w-1\/3 {
+        width: calc(1/3 * 100%);
+      }
+
+      .w-3\/4 {
+        width: calc(3/4 * 100%);
+      }
+
+      .w-10 {
+        width: calc(var(--spacing) * 10);
+      }
+
+      .w-32 {
+        width: calc(var(--spacing) * 32);
+      }
+
+      .w-\[50px\] {
+        width: 50px;
+      }
+
+      .w-full {
+        width: 100%;
+      }
+
+      .flex-1 {
+        flex: 1;
+      }
+
+      .rotate-90 {
+        rotate: 90deg;
+      }
+
+      .grid-cols-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+
+      .grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .flex-col {
+        flex-direction: column;
+      }
+
+      .flex-col-reverse {
+        flex-direction: column-reverse;
+      }
+
+      .flex-row {
+        flex-direction: row;
+      }
+
+      .flex-row-reverse {
+        flex-direction: row-reverse;
+      }
+
+      .flex-wrap {
+        flex-wrap: wrap;
+      }
+
+      .content-center {
+        align-content: center;
+      }
+
+      .items-center {
+        align-items: center;
+      }
+
+      .items-start {
+        align-items: flex-start;
+      }
+
+      .justify-around {
+        justify-content: space-around;
+      }
+
+      .justify-center {
+        justify-content: center;
+      }
+
+      .justify-end {
+        justify-content: flex-end;
+      }
+
+      .gap-2 {
+        gap: calc(var(--spacing) * 2);
+      }
+
+      .gap-4 {
+        gap: calc(var(--spacing) * 4);
+      }
+
+      .gap-12 {
+        gap: calc(var(--spacing) * 12);
+      }
+
+      .gap-24 {
+        gap: calc(var(--spacing) * 24);
+      }
+
+      .rounded-full {
+        border-radius: calc(infinity * 1px);
+      }
+
+      .rounded-t-4xl {
+        border-top-left-radius: var(--radius-4xl);
+        border-top-right-radius: var(--radius-4xl);
+      }
+
+      .rounded-b-4xl {
+        border-bottom-right-radius: var(--radius-4xl);
+        border-bottom-left-radius: var(--radius-4xl);
+      }
+
+      .border-2 {
+        border-style: var(--tw-border-style);
+        border-width: 2px;
+      }
+
+      .border-black {
+        border-color: var(--color-black);
+      }
+
+      .border-yellow-500 {
+        border-color: var(--color-yellow-500);
+      }
+
+      .bg-\[\#f5f6f6\] {
+        background-color: #f5f6f6;
+      }
+
+      .bg-gray-800 {
+        background-color: var(--color-gray-800);
+      }
+
+      .bg-white {
+        background-color: var(--color-white);
+      }
+
+      .bg-yellow-500 {
+        background-color: var(--color-yellow-500);
+      }
+
+      .p-4 {
+        padding: calc(var(--spacing) * 4);
+      }
+
+      .px-4 {
+        padding-inline: calc(var(--spacing) * 4);
+      }
+
+      .px-12 {
+        padding-inline: calc(var(--spacing) * 12);
+      }
+
+      .py-2 {
+        padding-block: calc(var(--spacing) * 2);
+      }
+
+      .py-6 {
+        padding-block: calc(var(--spacing) * 6);
+      }
+
+      .py-8 {
+        padding-block: calc(var(--spacing) * 8);
+      }
+
+      .py-12 {
+        padding-block: calc(var(--spacing) * 12);
+      }
+
+      .py-24 {
+        padding-block: calc(var(--spacing) * 24);
+      }
+
+      .pt-24 {
+        padding-top: calc(var(--spacing) * 24);
+      }
+
+      .pb-24 {
+        padding-bottom: calc(var(--spacing) * 24);
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .text-right {
+        text-align: right;
+      }
+
+      .text-2xl {
+        font-size: var(--text-2xl);
+        line-height: var(--tw-leading, var(--text-2xl--line-height));
+      }
+
+      .text-3xl {
+        font-size: var(--text-3xl);
+        line-height: var(--tw-leading, var(--text-3xl--line-height));
+      }
+
+      .text-lg {
+        font-size: var(--text-lg);
+        line-height: var(--tw-leading, var(--text-lg--line-height));
+      }
+
+      .text-sm {
+        font-size: var(--text-sm);
+        line-height: var(--tw-leading, var(--text-sm--line-height));
+      }
+
+      .text-xl {
+        font-size: var(--text-xl);
+        line-height: var(--tw-leading, var(--text-xl--line-height));
+      }
+
+      .font-bold {
+        --tw-font-weight: var(--font-weight-bold);
+        font-weight: var(--font-weight-bold);
+      }
+
+      .font-light {
+        --tw-font-weight: var(--font-weight-light);
+        font-weight: var(--font-weight-light);
+      }
+
+      .text-gray-400 {
+        color: var(--color-gray-400);
+      }
+
+      .text-gray-600 {
+        color: var(--color-gray-600);
+      }
+
+      .text-white {
+        color: var(--color-white);
+      }
+
+      .text-yellow-500 {
+        color: var(--color-yellow-500);
+      }
+
+      .uppercase {
+        text-transform: uppercase;
+      }
+
+      .italic {
+        font-style: italic;
+      }
+
+      .shadow-lg {
+        --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      }
+
+      .shadow-md {
+        --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      }
+
+      .transition-all {
+        transition-property: all;
+        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+        transition-duration: var(--tw-duration, var(--default-transition-duration));
+      }
+
+      .duration-200 {
+        --tw-duration: 200ms;
+        transition-duration: 200ms;
+      }
+
+      .before\:absolute {
+        &::before {
+          content: var(--tw-content);
+          position: absolute;
+        }
+      }
+
+      .before\:top-0 {
+        &::before {
+          content: var(--tw-content);
+          top: calc(var(--spacing) * 0);
+        }
+      }
+
+      .before\:left-0 {
+        &::before {
+          content: var(--tw-content);
+          left: calc(var(--spacing) * 0);
+        }
+      }
+
+      .before\:h-10 {
+        &::before {
+          content: var(--tw-content);
+          height: calc(var(--spacing) * 10);
+        }
+      }
+
+      .before\:w-10 {
+        &::before {
+          content: var(--tw-content);
+          width: calc(var(--spacing) * 10);
+        }
+      }
+
+      .before\:-translate-x-full {
+        &::before {
+          content: var(--tw-content);
+          --tw-translate-x: -100%;
+          translate: var(--tw-translate-x) var(--tw-translate-y);
+        }
+      }
+
+      .before\:-translate-y-1\/4 {
+        &::before {
+          content: var(--tw-content);
+          --tw-translate-y: calc(calc(1/4 * 100%) * -1);
+          translate: var(--tw-translate-x) var(--tw-translate-y);
+        }
+      }
+
+      .before\:text-center {
+        &::before {
+          content: var(--tw-content);
+          text-align: center;
+        }
+      }
+
+      .before\:text-8xl {
+        &::before {
+          content: var(--tw-content);
+          font-size: var(--text-8xl);
+          line-height: var(--tw-leading, var(--text-8xl--line-height));
+        }
+      }
+
+      .before\:leading-tight {
+        &::before {
+          content: var(--tw-content);
+          --tw-leading: var(--leading-tight);
+          line-height: var(--leading-tight);
+        }
+      }
+
+      .before\:text-black {
+        &::before {
+          content: var(--tw-content);
+          color: var(--color-black);
+        }
+      }
+
+      .before\:text-gray-400 {
+        &::before {
+          content: var(--tw-content);
+          color: var(--color-gray-400);
+        }
+      }
+
+      .before\:content-\[\'“\'\] {
+        &::before {
+          content: var(--tw-content);
+          --tw-content: '“';
+          content: var(--tw-content);
+        }
+      }
+
+      .hover\:text-yellow-700 {
+        &:hover {
+          @media (hover: hover) {
+            color: var(--color-yellow-700);
+          }
+        }
+      }
+
+      .hover\:opacity-80 {
+        &:hover {
+          @media (hover: hover) {
+            opacity: 80%;
+          }
+        }
+      }
+
+      .sm\:block {
+        @media (width >=40rem) {
+          display: block;
+        }
+      }
+
+      .sm\:hidden {
+        @media (width >=40rem) {
+          display: none;
+        }
+      }
+
+      .sm\:w-3\/4 {
+        @media (width >=40rem) {
+          width: calc(3/4 * 100%);
+        }
+      }
+
+      .sm\:w-3\/12 {
+        @media (width >=40rem) {
+          width: calc(3/12 * 100%);
+        }
+      }
+
+      .sm\:w-\[50px\] {
+        @media (width >=40rem) {
+          width: 50px;
+        }
+      }
+
+      .sm\:rotate-0 {
+        @media (width >=40rem) {
+          rotate: 0deg;
+        }
+      }
+
+      .sm\:flex-row {
+        @media (width >=40rem) {
+          flex-direction: row;
+        }
+      }
+
+      .sm\:flex-row-reverse {
+        @media (width >=40rem) {
+          flex-direction: row-reverse;
+        }
+      }
+
+      .sm\:items-end {
+        @media (width >=40rem) {
+          align-items: flex-end;
+        }
+      }
+
+      .sm\:items-start {
+        @media (width >=40rem) {
+          align-items: flex-start;
+        }
+      }
+
+      .sm\:justify-end {
+        @media (width >=40rem) {
+          justify-content: flex-end;
+        }
+      }
+
+      .sm\:gap-4 {
+        @media (width >=40rem) {
+          gap: calc(var(--spacing) * 4);
+        }
+      }
+
+      .sm\:text-left {
+        @media (width >=40rem) {
+          text-align: left;
+        }
+      }
+
+      .sm\:text-right {
+        @media (width >=40rem) {
+          text-align: right;
+        }
+      }
+
+      .sm\:before\:content-\[\'sm\'\] {
+        @media (width >=40rem) {
+          &::before {
+            content: var(--tw-content);
+            --tw-content: 'sm';
+            content: var(--tw-content);
+          }
+        }
+      }
+
+      .md\:w-1\/3 {
+        @media (width >=48rem) {
+          width: calc(1/3 * 100%);
+        }
+      }
+
+      .md\:w-3\/4 {
+        @media (width >=48rem) {
+          width: calc(3/4 * 100%);
+        }
+      }
+
+      .md\:grid-cols-3 {
+        @media (width >=48rem) {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      .md\:px-4 {
+        @media (width >=48rem) {
+          padding-inline: calc(var(--spacing) * 4);
+        }
+      }
+
+      .md\:before\:content-\[\'md\'\] {
+        @media (width >=48rem) {
+          &::before {
+            content: var(--tw-content);
+            --tw-content: 'md';
+            content: var(--tw-content);
+          }
+        }
+      }
+
+      .lg\:w-1\/2 {
+        @media (width >=64rem) {
+          width: calc(1/2 * 100%);
+        }
+      }
+
+      .lg\:w-1\/3 {
+        @media (width >=64rem) {
+          width: calc(1/3 * 100%);
+        }
+      }
+
+      .lg\:w-4\/12 {
+        @media (width >=64rem) {
+          width: calc(4/12 * 100%);
+        }
+      }
+
+      .lg\:w-5\/12 {
+        @media (width >=64rem) {
+          width: calc(5/12 * 100%);
+        }
+      }
+
+      .lg\:before\:content-\[\'lg\'\] {
+        @media (width >=64rem) {
+          &::before {
+            content: var(--tw-content);
+            --tw-content: 'lg';
+            content: var(--tw-content);
+          }
+        }
+      }
+
+      .xl\:w-1\/2 {
+        @media (width >=80rem) {
+          width: calc(1/2 * 100%);
+        }
+      }
+
+      .xl\:w-1\/3 {
+        @media (width >=80rem) {
+          width: calc(1/3 * 100%);
+        }
+      }
+
+      .xl\:before\:content-\[\'xl\'\] {
+        @media (width >=80rem) {
+          &::before {
+            content: var(--tw-content);
+            --tw-content: 'xl';
+            content: var(--tw-content);
+          }
+        }
+      }
+
+      .\32 xl\:before\:content-\[\'2xl\'\] {
+        @media (width >=96rem) {
+          &::before {
+            content: var(--tw-content);
+            --tw-content: '2xl';
+            content: var(--tw-content);
+          }
+        }
       }
     }
-  }
-  .sm\:block {
-    @media (width >= 40rem) {
-      display: block;
+
+    @property --tw-border-style {
+      syntax: "*";
+      inherits: false;
+      initial-value: solid;
     }
-  }
-  .sm\:hidden {
-    @media (width >= 40rem) {
-      display: none;
+
+    @property --tw-font-weight {
+      syntax: "*";
+      inherits: false;
     }
-  }
-  .sm\:w-3\/4 {
-    @media (width >= 40rem) {
-      width: calc(3/4 * 100%);
+
+    @property --tw-shadow {
+      syntax: "*";
+      inherits: false;
+      initial-value: 0 0 #0000;
     }
-  }
-  .sm\:w-3\/12 {
-    @media (width >= 40rem) {
-      width: calc(3/12 * 100%);
+
+    @property --tw-shadow-color {
+      syntax: "*";
+      inherits: false;
     }
-  }
-  .sm\:w-\[50px\] {
-    @media (width >= 40rem) {
-      width: 50px;
+
+    @property --tw-shadow-alpha {
+      syntax: "<percentage>";
+      inherits: false;
+      initial-value: 100%;
     }
-  }
-  .sm\:rotate-0 {
-    @media (width >= 40rem) {
-      rotate: 0deg;
+
+    @property --tw-inset-shadow {
+      syntax: "*";
+      inherits: false;
+      initial-value: 0 0 #0000;
     }
-  }
-  .sm\:flex-row {
-    @media (width >= 40rem) {
-      flex-direction: row;
+
+    @property --tw-inset-shadow-color {
+      syntax: "*";
+      inherits: false;
     }
-  }
-  .sm\:flex-row-reverse {
-    @media (width >= 40rem) {
-      flex-direction: row-reverse;
+
+    @property --tw-inset-shadow-alpha {
+      syntax: "<percentage>";
+      inherits: false;
+      initial-value: 100%;
     }
-  }
-  .sm\:items-end {
-    @media (width >= 40rem) {
-      align-items: flex-end;
+
+    @property --tw-ring-color {
+      syntax: "*";
+      inherits: false;
     }
-  }
-  .sm\:items-start {
-    @media (width >= 40rem) {
-      align-items: flex-start;
+
+    @property --tw-ring-shadow {
+      syntax: "*";
+      inherits: false;
+      initial-value: 0 0 #0000;
     }
-  }
-  .sm\:justify-end {
-    @media (width >= 40rem) {
-      justify-content: flex-end;
+
+    @property --tw-inset-ring-color {
+      syntax: "*";
+      inherits: false;
     }
-  }
-  .sm\:gap-4 {
-    @media (width >= 40rem) {
-      gap: calc(var(--spacing) * 4);
+
+    @property --tw-inset-ring-shadow {
+      syntax: "*";
+      inherits: false;
+      initial-value: 0 0 #0000;
     }
-  }
-  .sm\:text-left {
-    @media (width >= 40rem) {
-      text-align: left;
+
+    @property --tw-ring-inset {
+      syntax: "*";
+      inherits: false;
     }
-  }
-  .sm\:text-right {
-    @media (width >= 40rem) {
-      text-align: right;
+
+    @property --tw-ring-offset-width {
+      syntax: "<length>";
+      inherits: false;
+      initial-value: 0px;
     }
-  }
-  .sm\:before\:content-\[\'sm\'\] {
-    @media (width >= 40rem) {
-      &::before {
-        content: var(--tw-content);
-        --tw-content: 'sm';
-        content: var(--tw-content);
+
+    @property --tw-ring-offset-color {
+      syntax: "*";
+      inherits: false;
+      initial-value: #fff;
+    }
+
+    @property --tw-ring-offset-shadow {
+      syntax: "*";
+      inherits: false;
+      initial-value: 0 0 #0000;
+    }
+
+    @property --tw-duration {
+      syntax: "*";
+      inherits: false;
+    }
+
+    @property --tw-content {
+      syntax: "*";
+      initial-value: "";
+      inherits: false;
+    }
+
+    @property --tw-translate-x {
+      syntax: "*";
+      inherits: false;
+      initial-value: 0;
+    }
+
+    @property --tw-translate-y {
+      syntax: "*";
+      inherits: false;
+      initial-value: 0;
+    }
+
+    @property --tw-translate-z {
+      syntax: "*";
+      inherits: false;
+      initial-value: 0;
+    }
+
+    @property --tw-leading {
+      syntax: "*";
+      inherits: false;
+    }
+
+    @layer properties {
+      @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+
+        *,
+        ::before,
+        ::after,
+        ::backdrop {
+          --tw-border-style: solid;
+          --tw-font-weight: initial;
+          --tw-shadow: 0 0 #0000;
+          --tw-shadow-color: initial;
+          --tw-shadow-alpha: 100%;
+          --tw-inset-shadow: 0 0 #0000;
+          --tw-inset-shadow-color: initial;
+          --tw-inset-shadow-alpha: 100%;
+          --tw-ring-color: initial;
+          --tw-ring-shadow: 0 0 #0000;
+          --tw-inset-ring-color: initial;
+          --tw-inset-ring-shadow: 0 0 #0000;
+          --tw-ring-inset: initial;
+          --tw-ring-offset-width: 0px;
+          --tw-ring-offset-color: #fff;
+          --tw-ring-offset-shadow: 0 0 #0000;
+          --tw-duration: initial;
+          --tw-content: "";
+          --tw-translate-x: 0;
+          --tw-translate-y: 0;
+          --tw-translate-z: 0;
+          --tw-leading: initial;
+        }
       }
     }
-  }
-  .md\:w-1\/3 {
-    @media (width >= 48rem) {
-      width: calc(1/3 * 100%);
-    }
-  }
-  .md\:w-3\/4 {
-    @media (width >= 48rem) {
-      width: calc(3/4 * 100%);
-    }
-  }
-  .md\:grid-cols-3 {
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-  }
-  .md\:px-4 {
-    @media (width >= 48rem) {
-      padding-inline: calc(var(--spacing) * 4);
-    }
-  }
-  .md\:before\:content-\[\'md\'\] {
-    @media (width >= 48rem) {
-      &::before {
-        content: var(--tw-content);
-        --tw-content: 'md';
-        content: var(--tw-content);
-      }
-    }
-  }
-  .lg\:w-1\/2 {
-    @media (width >= 64rem) {
-      width: calc(1/2 * 100%);
-    }
-  }
-  .lg\:w-1\/3 {
-    @media (width >= 64rem) {
-      width: calc(1/3 * 100%);
-    }
-  }
-  .lg\:w-4\/12 {
-    @media (width >= 64rem) {
-      width: calc(4/12 * 100%);
-    }
-  }
-  .lg\:w-5\/12 {
-    @media (width >= 64rem) {
-      width: calc(5/12 * 100%);
-    }
-  }
-  .lg\:before\:content-\[\'lg\'\] {
-    @media (width >= 64rem) {
-      &::before {
-        content: var(--tw-content);
-        --tw-content: 'lg';
-        content: var(--tw-content);
-      }
-    }
-  }
-  .xl\:w-1\/2 {
-    @media (width >= 80rem) {
-      width: calc(1/2 * 100%);
-    }
-  }
-  .xl\:w-1\/3 {
-    @media (width >= 80rem) {
-      width: calc(1/3 * 100%);
-    }
-  }
-  .xl\:before\:content-\[\'xl\'\] {
-    @media (width >= 80rem) {
-      &::before {
-        content: var(--tw-content);
-        --tw-content: 'xl';
-        content: var(--tw-content);
-      }
-    }
-  }
-  .\32 xl\:before\:content-\[\'2xl\'\] {
-    @media (width >= 96rem) {
-      &::before {
-        content: var(--tw-content);
-        --tw-content: '2xl';
-        content: var(--tw-content);
-      }
-    }
-  }
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-@property --tw-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-shadow-alpha {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
-@property --tw-inset-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-@property --tw-inset-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-inset-shadow-alpha {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
-@property --tw-ring-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-ring-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-@property --tw-inset-ring-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-inset-ring-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-@property --tw-ring-inset {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-ring-offset-width {
-  syntax: "<length>";
-  inherits: false;
-  initial-value: 0px;
-}
-@property --tw-ring-offset-color {
-  syntax: "*";
-  inherits: false;
-  initial-value: #fff;
-}
-@property --tw-ring-offset-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-@property --tw-duration {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-content {
-  syntax: "*";
-  initial-value: "";
-  inherits: false;
-}
-@property --tw-translate-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-leading {
-  syntax: "*";
-  inherits: false;
-}
-@layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
-    *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
-      --tw-font-weight: initial;
-      --tw-shadow: 0 0 #0000;
-      --tw-shadow-color: initial;
-      --tw-shadow-alpha: 100%;
-      --tw-inset-shadow: 0 0 #0000;
-      --tw-inset-shadow-color: initial;
-      --tw-inset-shadow-alpha: 100%;
-      --tw-ring-color: initial;
-      --tw-ring-shadow: 0 0 #0000;
-      --tw-inset-ring-color: initial;
-      --tw-inset-ring-shadow: 0 0 #0000;
-      --tw-ring-inset: initial;
-      --tw-ring-offset-width: 0px;
-      --tw-ring-offset-color: #fff;
-      --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-duration: initial;
-      --tw-content: "";
-      --tw-translate-x: 0;
-      --tw-translate-y: 0;
-      --tw-translate-z: 0;
-      --tw-leading: initial;
-    }
-  }
-}
-</style><link rel="stylesheet" href="./Get Coach App_files/css2" defer=""><link rel="stylesheet" href="./Get Coach App_files/global.css"></head><body class="min-h-screen bg-coach-bg w-full inter-font"><div class="flex min-h-screen content-center justify-center"><div class="flex flex-col w-full items-center"><div class="w-full bg-[#f5f6f6]"><div class="bg-gray-800 rounded-b-4xl w-full"><div class="bg-white rounded-b-4xl w-full"><div class="flex flex-col items-center w-full"><img class="mx-auto mb-4" src="./Get Coach App_files/Logo-Coach-Dark.svg" alt="Coach Logo"><h1 class="text-3xl w-1/2 font-bold mb-4 text-center">Transform the Way You Train and Develop Talent</h1><p class="text-lg font-light text-gray-600 mb-8 w-1/2 text-center">Deliver fast, personalized training that increases knowledge retention and drives continuous growth.</p></div><div class="flex justify-center"><img class="w-1/3" src="./Get Coach App_files/banner-onboarding-training.png" alt="Woman holding a tablet next to a large smartphone"></div></div><div class="bg-gray-800 rounded-b-4xl py-6"><div class="flex flex-wrap justify-center gap-4"><img class="h-12" src="./Get Coach App_files/neptun-light.png" alt="Neptun"><img class="h-12" src="./Get Coach App_files/springwell-light.png" alt="Springwell"><img class="h-12" src="./Get Coach App_files/evn-light.png" alt="EVN"><img class="h-12" src="./Get Coach App_files/acibadem-light.png" alt="Acibadem Sistina"><img class="h-12" src="./Get Coach App_files/sava-light.png" alt="Sava"></div></div></div></div><div class="flex flex-wrap justify-center items-center bg-[#f5f6f6] rounded-b-4xl py-8"><div class="w-1/2 text-center" id="features-section"><div><h2 class="text-2xl font-bold mb-4">Unique Approach to Employee Training</h2><p class="text-gray-600 mb-4">Coach is a unique learning platform that turns employee training into a daily activity through short lessons and interactive learning games. With just 5-10 minutes a day, Coach enables employees to build skills, reinforce knowledge, and drive continuous growth.</p></div></div><div class="flex w-3/4 flex-wrap flex-row justify-center items-center p-4"><div class="w-full lg:w-1/2 xl:w-1/2 p-4"><h3 class="text-xl font-bold mb-2">Customizable Learning Content</h3><p class="text-gray-600 mb-4">Your training should be as unique as your business. Whether it's sales, product knowledge, customer service techniques, or internal processes, Coach turns your internal content into interactive, role-specific training that's practical and directly relevant. Each lesson aligns with your company's vision and standards, providing employees with practical, role-specific skills to fuel growth and performance.</p></div><div class="w-full lg:w-1/2 xl:w-1/2 p-4 flex justify-center"><img class="w-3/4" src="./Get Coach App_files/i-retail-1-1.png" alt="Two smartphones showcasing the Coach app"></div></div><div class="flex w-3/4 flex-wrap flex-row-reverse justify-center items-center p-4"><div class="w-full lg:w-1/2 xl:w-1/2 p-4"><h3 class="text-xl font-bold mb-2">Save Time on Training Creation</h3><p class="text-gray-600 mb-4">Launching a training or updating an old one often requires a lot of time. With Coach, you just upload your training documents, and Coach transforms them into interactive microlessons and quizzes, reducing training prep time by up to 90%.</p></div><div class="w-full lg:w-1/2 xl:w-1/2 p-4 flex justify-center"><img class="w-3/4" src="./Get Coach App_files/i-product-3.png" alt="Two smartphones showcasing the Coach app"></div></div><div class="flex w-3/4 flex-wrap flex-row justify-center items-center p-4"><div class="w-full lg:w-1/2 xl:w-1/2 p-4"><h3 class="text-xl font-bold mb-2">Tailored Learning Paths for Every Role</h3><p class="text-gray-600 mb-4">Coach keeps training relevant and efficient by automating learning paths tailored to each role or skill level. Employees receive training at the right time, automatically progressing as they reach milestones, eliminating the need for manual tracking and ensuring continuous development aligned with company goals.</p></div><div class="w-full lg:w-1/2 xl:w-1/2 p-4 flex justify-center"><img class="w-3/4" src="./Get Coach App_files/trainingcontent.png" alt="Two smartphones showcasing the Coach app"></div></div><div class="flex w-3/4 flex-wrap flex-row-reverse justify-center items-center p-4"><div class="w-full lg:w-1/2 xl:w-1/2 p-4"><h3 class="text-xl font-bold mb-2">Adaptive, Targeted Learning</h3><p class="text-gray-600 mb-4">As employees learn through the interactive games, Coach identifies their knowledge gaps and recommends the right lessons to help employees improve where it’s most needed. This adaptive approach keeps employees engaged and ensures they continuously build the skills required to perform at their best.</p></div><div class="w-full lg:w-1/2 xl:w-1/2 p-4 flex justify-center"><img class="w-3/4" src="./Get Coach App_files/i-insurance-1-1.png" alt="Two smartphones showcasing the Coach app"></div></div><div class="flex w-3/4 flex-wrap flex-row justify-center items-center p-4"><div class="w-full lg:w-1/2 xl:w-1/2 p-4"><h3 class="text-xl font-bold mb-2">Real-Time Training Insights</h3><p class="text-gray-600 mb-4">Coach gives you a clear view of each employee’s and department’s skills in real-time. Quickly spot knowledge gaps, track progress, and fine-tune training to keep teams aligned with company goals and ready for what’s next.</p></div><div class="w-full lg:w-1/2 xl:w-1/2 p-4 flex justify-center"><img class="w-3/4" src="./Get Coach App_files/i-retail-1-3.png" alt="Two smartphones showcasing the Coach app"></div></div></div><div class="p-4 flex flex-col items-center justify-center py-12"><h2 class="text-2xl font-bold mb-4 text-center py-12">Solve the Biggest Problems in Employee Training</h2><div class="flex flex-col items-start justify-center gap-24"><div class="flex flex-col sm:flex-row items-center sm:items-start w-full justify-center gap-12"><div class="flex flex-col-reverse sm:flex-row w-full sm:w-3/12 justify-end gap-2 sm:gap-4" id="left-content"><div class="flex flex-col items-center sm:items-end justify-center sm:text-right w-full sm:w-3/4"><div class="sm:hidden"><img class="block w-[50px]" alt="person-question-mark" src="./Get Coach App_files/person-question-mark-80x80.png"></div><h3 class="text-lg font-bold text-center sm:text-right mb-2 flex items-center">Complex Material</h3><p class="text-gray-600 text-center sm:text-right">Employees struggle with dense content and training overload.</p></div><div class="w-full sm:w-[50px] hidden sm:block"><img class="block w-[50px]" alt="person-question-mark" src="./Get Coach App_files/person-question-mark-80x80.png"></div></div><div class="flex flex-row items-center w-[50px] rotate-90 sm:rotate-0"><img class="block w-full" alt="arrow-right-sm" src="./Get Coach App_files/arrow-right-sm-80x80.png"></div><div class="flex flex-col-reverse sm:flex-row-reverse w-full sm:w-3/12 justify-end gap-2 sm:gap-4" id="right-content"><div class="flex flex-col items-center sm:items-start justify-center sm:text-left w-full sm:w-3/4"><div class="sm:hidden"><img class="block w-[50px]" alt="docs" src="./Get Coach App_files/docs-80x80.png"></div><h3 class="text-lg font-bold text-center sm:text-left mb-2 flex items-center">MicroLessons for Faster Mastery</h3><p class="text-gray-600 text-center sm:text-left">Coach breaks down complex topics into easy-to-understand, bite-sized lessons, making it easier for employees to grasp and retain key details.</p></div><div class="w-full sm:w-[50px] hidden sm:block"><img class="block w-[50px]" alt="docs" src="./Get Coach App_files/docs-80x80.png"></div></div></div><div class="flex flex-col sm:flex-row items-center sm:items-start w-full justify-center gap-12"><div class="flex flex-col-reverse sm:flex-row w-full sm:w-3/12 justify-end gap-2 sm:gap-4" id="left-content"><div class="flex flex-col items-center sm:items-end justify-center sm:text-right w-full sm:w-3/4"><div class="sm:hidden"><img class="block w-[50px]" alt="paragraph-x" src="./Get Coach App_files/paragraph-x-80x80.png"></div><h3 class="text-lg font-bold text-center sm:text-right mb-2 flex items-center">Constant Training Changes</h3><p class="text-gray-600 text-center sm:text-right">Frequent updates make it challenging for employees to stay current.</p></div><div class="w-full sm:w-[50px] hidden sm:block"><img class="block w-[50px]" alt="paragraph-x" src="./Get Coach App_files/paragraph-x-80x80.png"></div></div><div class="flex flex-row items-center w-[50px] rotate-90 sm:rotate-0"><img class="block w-full" alt="arrow-right-sm" src="./Get Coach App_files/arrow-right-sm-80x80.png"></div><div class="flex flex-col-reverse sm:flex-row-reverse w-full sm:w-3/12 justify-end gap-2 sm:gap-4" id="right-content"><div class="flex flex-col items-center sm:items-start justify-center sm:text-left w-full sm:w-3/4"><div class="sm:hidden"><img class="block w-[50px]" alt="docs-ai" src="./Get Coach App_files/docs-ai-80x80.png"></div><h3 class="text-lg font-bold text-center sm:text-left mb-2 flex items-center">AI Powered Training Creation Tool</h3><p class="text-gray-600 text-center sm:text-left">Coach's AI-powered tool simplifies training updates, providing employees with the latest information in a short time.</p></div><div class="w-full sm:w-[50px] hidden sm:block"><img class="block w-[50px]" alt="docs-ai" src="./Get Coach App_files/docs-ai-80x80.png"></div></div></div><div class="flex flex-col sm:flex-row items-center sm:items-start w-full justify-center gap-12"><div class="flex flex-col-reverse sm:flex-row w-full sm:w-3/12 justify-end gap-2 sm:gap-4" id="left-content"><div class="flex flex-col items-center sm:items-end justify-center sm:text-right w-full sm:w-3/4"><div class="sm:hidden"><img class="block w-[50px]" alt="chart-down" src="./Get Coach App_files/chart-down-80x80.png"></div><h3 class="text-lg font-bold text-center sm:text-right mb-2 flex items-center">Low Engagement</h3><p class="text-gray-600 text-center sm:text-right">Traditional training often lacks engagement, leading to low completion rates.</p></div><div class="w-full sm:w-[50px] hidden sm:block"><img class="block w-[50px]" alt="chart-down" src="./Get Coach App_files/chart-down-80x80.png"></div></div><div class="flex flex-row items-center w-[50px] rotate-90 sm:rotate-0"><img class="block w-full" alt="arrow-right-sm" src="./Get Coach App_files/arrow-right-sm-80x80.png"></div><div class="flex flex-col-reverse sm:flex-row-reverse w-full sm:w-3/12 justify-end gap-2 sm:gap-4" id="right-content"><div class="flex flex-col items-center sm:items-start justify-center sm:text-left w-full sm:w-3/4"><div class="sm:hidden"><img class="block w-[50px]" alt="game-controller" src="./Get Coach App_files/game-controller-80x80.png"></div><h3 class="text-lg font-bold text-center sm:text-left mb-2 flex items-center">Gamification &amp; Interactive Learning</h3><p class="text-gray-600 text-center sm:text-left">Coach incorporates gamified elements, motivating employees to complete their training through points, rewards, and interactive games.</p></div><div class="w-full sm:w-[50px] hidden sm:block"><img class="block w-[50px]" alt="game-controller" src="./Get Coach App_files/game-controller-80x80.png"></div></div></div></div></div><div class="w-full flex flex-col items-center"><h2 class="w-full text-3xl bg-[#f5f6f6] font-bold mb-4 text-center py-24 rounded-t-4xl">A Proven Solution with Real Results</h2><div class="flex flex-wrap justify-center py-12 shadow-md z-10 w-full"><div class="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 p-4 text-center"><img class="mx-auto mb-2" src="./Get Coach App_files/game-controller.svg" alt="Icon"><p class="text-3xl font-bold">80%</p><p class="text-gray-600 uppercase font-bold">Employee Engagement Increase</p></div><div class="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 p-4 text-center"><img class="mx-auto mb-2" src="./Get Coach App_files/clock.svg" alt="Icon"><p class="text-3xl font-bold">90%</p><p class="text-gray-600 uppercase font-bold">Reduction in Training Preparation Time</p></div><div class="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 p-4 text-center"><img class="mx-auto mb-2" src="./Get Coach App_files/chart-up.svg" alt="Icon"><p class="text-3xl font-bold">26%</p><p class="text-gray-600 uppercase font-bold">Total Knowledge Increase On Average</p></div></div><div class="w-full bg-[#f5f6f6] rounded-b-4xl py-12"><p class="text-center text-gray-600 mb-4">Coach has received over 4,000+ positive reviews</p><div class="flex flex-wrap justify-center mb-4"><img class="h-12 mx-2" src="./Get Coach App_files/neptun-dark.png" alt="Neptun"><img class="h-12 mx-2" src="./Get Coach App_files/springwell-dark.png" alt="Springwell"><img class="h-12 mx-2" src="./Get Coach App_files/evn-dark.png" alt="EVN"><img class="h-12 mx-2" src="./Get Coach App_files/acibadem-dark.png" alt="Acibadem Sistina"><img class="h-12 mx-2" src="./Get Coach App_files/sava-dark.png" alt="Sava"></div><div class="flex flex-col items-center gap-12 justify-center"><div class="w-full flex flex-col-reverse items-center sm:items-start sm:flex-row-reverse md:w-3/4 xl:w-1/2 px-12 md:px-4 gap-12"><div class="relative flex flex-col items-start mb-4 before:content-[&#39;“&#39;] before:text-gray-400 before: before:text-8xl before:leading-tight before:absolute before:-translate-y-1/4 before:-translate-x-full"><p class="text-gray-600 italic">Coach is our study buddy that contributes to increasing sales knowledge, and enriches employees' skills in an innovative &amp; fun way, adding value for everyone.</p><div><p class="text-lg font-bold">Daniela Karadakov</p><p class="text-gray-400 font-bold">Training And Development Manager At Neptun</p></div></div><img class="rounded-full h-32 w-32 mr-4" src="./Get Coach App_files/testimonial-1.png" alt="Daniela Karadakov"></div><div class="w-full flex flex-col-reverse items-center sm:items-start sm:flex-row md:w-3/4 xl:w-1/2 px-12 md:px-4 gap-12"><div class="relative flex flex-col items-start mb-4 before:content-[&#39;“&#39;] before:text-gray-400 before: before:text-8xl before:leading-tight before:absolute before:-translate-y-1/4 before:-translate-x-full"><p class="text-gray-600 italic">The nurses at Acibadem Sistina have wholeheartedly adopted this new learning style. Within just a month, a healthy competitive spirit has emerged among the staff</p><div><p class="text-lg font-bold">Androniki Bibovski</p><p class="text-gray-400 font-bold">Nurse For Education And Training At Acibadem Sistina</p></div></div><img class="rounded-full h-32 w-32 mr-4" src="./Get Coach App_files/testimonial-2.png" alt="Androniki Bibovski"></div></div></div></div><div class="flex flex-col items-center justify-center py-24 gap-12"><h2 class="text-2xl font-bold mb-4 text-center">Unlock Efficiency and Growth with Coach</h2><div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-3/4 gap-12"><div class="text-center flex flex-col items-center justify-center"><img class="mx-auto mb-2" src="./Get Coach App_files/chart-up.svg" alt="Icon"><h3 class="text-lg font-bold mb-2 w-3/4">Increase Performance</h3><p class="text-gray-600 w-3/4">Equip teams to handle complex knowledge confidently.</p></div><div class="text-center flex flex-col items-center justify-center"><img class="mx-auto mb-2" src="./Get Coach App_files/clock.svg" alt="Icon"><h3 class="text-lg font-bold mb-2 w-3/4">Reduce Training Preparation Time by 90%</h3><p class="text-gray-600 w-3/4">Free up resources with streamlined training creation and delivery.</p></div><div class="text-center flex flex-col items-center justify-center"><img class="mx-auto mb-2" src="./Get Coach App_files/phone-rotate.svg" alt="Icon"><h3 class="text-lg font-bold mb-2 w-3/4">Focus on What Matters</h3><p class="text-gray-600 w-3/4">With only 5-10 minutes a day, Coach keeps employees knowledgeable without impacting their work.</p></div><div class="text-center flex flex-col items-center justify-center"><img class="mx-auto mb-2" src="./Get Coach App_files/person-shadow.svg" alt="Icon"><h3 class="text-lg font-bold mb-2 w-3/4">Scale Easily</h3><p class="text-gray-600 w-3/4">Train hundreds of employees across multiple locations, ensuring consistent service and standards.</p></div><div class="text-center flex flex-col items-center justify-center"><img class="mx-auto mb-2" src="./Get Coach App_files/chart-bar.svg" alt="Icon"><h3 class="text-lg font-bold mb-2 w-3/4">Track Performance</h3><p class="text-gray-600 w-3/4">Use detailed KPIs to identify knowledge gaps, track progress, and receive personalized training recommendations.</p></div><div class="text-center flex flex-col items-center justify-center"><img class="mx-auto mb-2" src="./Get Coach App_files/aim.svg" alt="Icon"><h3 class="text-lg font-bold mb-2 w-3/4">Fill in Knowledge Gaps</h3><p class="text-gray-600 w-3/4">Coach automatically identifies where employees need improvement and delivers targeted lessons to fill in those gaps.</p></div></div></div><footer class="bg-gray-800 text-white pt-24 pb-24 rounded-t-4xl w-full p-4"><div class="flex flex-col items-center justify-center gap-12"><h1 class="text-2xl text-center">Join the companies already benefiting from smarter training with Coach.</h1><h2 class="text-2xl font-bold mb-4 text-center">Let's do better together.</h2><p class="text-lg mb-4 font-light text-center">Schedule a demo now and let us show you the full capability of Coach Microlearning.</p><a class="text-lg text-yellow-500 hover:text-yellow-700" href="https://www.getcoach.eu/">www.getcoach.eu</a><div class="flex flex-col items-center gap-4 w-1/3 h-fit"><div class="z-10 w-3/4 lg:w-5/12 fixed bottom-4 grid grid-cols-2 bg-gray-800 gap-4 justify-around items-center rounded-full border-2 border-yellow-500 p-4"><div class="flex w-1/2 flex-1 w-full flex-col sm:flex-row items-center gap-4 sm:justify-end"><span class="text-sm uppercase hidden sm:block text-right">Brought to you by</span><img class="w-1/2 sm:w-3/12 md:2/12 lg:w-4/12 h-fit" src="./Get Coach App_files/fb-it-solutions-logo.png" alt="Future Bridge IT Solutions"></div><div class="flex flex-1 w-1/2 w-full justify-center items-center"><a class="bg-yellow-500 hover:opacity-80 text-white font-bold py-2 px-4 rounded-full mr-2 transition-all duration-200" href="https://calendly.com/getcoach-info" target="_blank">Book a Demo</a></div></div></div></div></footer></div><span class="fixed bottom-1 right-1 w-10 h-10 bg-white shadow-lg border-2 border-black rounded-full before:absolute before:top-0 before:left-0 before:w-10 before:h-10 before:text-center before:text-black
-    xs:before:content-[&#39;xs&#39;] 
-    sm:before:content-[&#39;sm&#39;] 
-    md:before:content-[&#39;md&#39;] 
-    lg:before:content-[&#39;lg&#39;] 
-    xl:before:content-[&#39;xl&#39;] 
-    2xl:before:content-[&#39;2xl&#39;]"></span></div></body></html>
+  </style>
+  <link rel="stylesheet" href="./Get Coach App_files/css2" defer="">
+  <link rel="stylesheet" href="./Get Coach App_files/global.css">
+</head>
+
+<body class="min-h-screen bg-coach-bg w-full inter-font">
+  <div class="flex min-h-screen content-center justify-center">
+    <div class="flex flex-col w-full items-center">
+      <div class="w-full bg-[#f5f6f6]">
+        <div class="bg-gray-800 rounded-b-4xl w-full">
+          <div class="bg-white rounded-b-4xl w-full">
+            <div class="flex flex-col items-center w-full"><img class="mx-auto mb-4"
+                src="./Get Coach App_files/Logo-Coach-Dark.svg" alt="Coach Logo">
+              <h1 class="text-3xl w-1/2 font-bold mb-4 text-center">Transform the Way You Train and Develop Talent</h1>
+              <p class="text-lg font-light text-gray-600 mb-8 w-1/2 text-center">Deliver fast, personalized training
+                that increases knowledge retention and drives continuous growth.</p>
+            </div>
+            <div class="flex justify-center"><img class="w-1/3"
+                src="./Get Coach App_files/banner-onboarding-training.png"
+                alt="Woman holding a tablet next to a large smartphone"></div>
+          </div>
+          <div class="bg-gray-800 rounded-b-4xl py-6">
+            <div class="flex flex-wrap justify-center gap-4"><img class="h-12"
+                src="./Get Coach App_files/neptun-light.png" alt="Neptun"><img class="h-12"
+                src="./Get Coach App_files/springwell-light.png" alt="Springwell"><img class="h-12"
+                src="./Get Coach App_files/evn-light.png" alt="EVN"><img class="h-12"
+                src="./Get Coach App_files/acibadem-light.png" alt="Acibadem Sistina"><img class="h-12"
+                src="./Get Coach App_files/sava-light.png" alt="Sava"></div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-wrap justify-center items-center bg-[#f5f6f6] rounded-b-4xl py-8">
+        <div class="w-1/2 text-center" id="features-section">
+          <div>
+            <h2 class="text-2xl font-bold mb-4">Unique Approach to Employee Training</h2>
+            <p class="text-gray-600 mb-4">Coach is a unique learning platform that turns employee training into a daily
+              activity through short lessons and interactive learning games. With just 5-10 minutes a day, Coach enables
+              employees to build skills, reinforce knowledge, and drive continuous growth.</p>
+          </div>
+        </div>
+        <div class="flex w-3/4 flex-wrap flex-row justify-center items-center p-4">
+          <div class="w-full lg:w-1/2 xl:w-1/2 p-4">
+            <h3 class="text-xl font-bold mb-2">Customizable Learning Content</h3>
+            <p class="text-gray-600 mb-4">Your training should be as unique as your business. Whether it's sales,
+              product knowledge, customer service techniques, or internal processes, Coach turns your internal content
+              into interactive, role-specific training that's practical and directly relevant. Each lesson aligns with
+              your company's vision and standards, providing employees with practical, role-specific skills to fuel
+              growth and performance.</p>
+          </div>
+          <div class="w-full lg:w-1/2 xl:w-1/2 p-4 flex justify-center"><img class="w-3/4"
+              src="./Get Coach App_files/i-retail-1-1.png" alt="Two smartphones showcasing the Coach app"></div>
+        </div>
+        <div class="flex w-3/4 flex-wrap flex-row-reverse justify-center items-center p-4">
+          <div class="w-full lg:w-1/2 xl:w-1/2 p-4">
+            <h3 class="text-xl font-bold mb-2">Save Time on Training Creation</h3>
+            <p class="text-gray-600 mb-4">Launching a training or updating an old one often requires a lot of time. With
+              Coach, you just upload your training documents, and Coach transforms them into interactive microlessons
+              and quizzes, reducing training prep time by up to 90%.</p>
+          </div>
+          <div class="w-full lg:w-1/2 xl:w-1/2 p-4 flex justify-center"><img class="w-3/4"
+              src="./Get Coach App_files/i-product-3.png" alt="Two smartphones showcasing the Coach app"></div>
+        </div>
+        <div class="flex w-3/4 flex-wrap flex-row justify-center items-center p-4">
+          <div class="w-full lg:w-1/2 xl:w-1/2 p-4">
+            <h3 class="text-xl font-bold mb-2">Tailored Learning Paths for Every Role</h3>
+            <p class="text-gray-600 mb-4">Coach keeps training relevant and efficient by automating learning paths
+              tailored to each role or skill level. Employees receive training at the right time, automatically
+              progressing as they reach milestones, eliminating the need for manual tracking and ensuring continuous
+              development aligned with company goals.</p>
+          </div>
+          <div class="w-full lg:w-1/2 xl:w-1/2 p-4 flex justify-center"><img class="w-3/4"
+              src="./Get Coach App_files/trainingcontent.png" alt="Two smartphones showcasing the Coach app"></div>
+        </div>
+        <div class="flex w-3/4 flex-wrap flex-row-reverse justify-center items-center p-4">
+          <div class="w-full lg:w-1/2 xl:w-1/2 p-4">
+            <h3 class="text-xl font-bold mb-2">Adaptive, Targeted Learning</h3>
+            <p class="text-gray-600 mb-4">As employees learn through the interactive games, Coach identifies their
+              knowledge gaps and recommends the right lessons to help employees improve where it’s most needed. This
+              adaptive approach keeps employees engaged and ensures they continuously build the skills required to
+              perform at their best.</p>
+          </div>
+          <div class="w-full lg:w-1/2 xl:w-1/2 p-4 flex justify-center"><img class="w-3/4"
+              src="./Get Coach App_files/i-insurance-1-1.png" alt="Two smartphones showcasing the Coach app"></div>
+        </div>
+        <div class="flex w-3/4 flex-wrap flex-row justify-center items-center p-4">
+          <div class="w-full lg:w-1/2 xl:w-1/2 p-4">
+            <h3 class="text-xl font-bold mb-2">Real-Time Training Insights</h3>
+            <p class="text-gray-600 mb-4">Coach gives you a clear view of each employee’s and department’s skills in
+              real-time. Quickly spot knowledge gaps, track progress, and fine-tune training to keep teams aligned with
+              company goals and ready for what’s next.</p>
+          </div>
+          <div class="w-full lg:w-1/2 xl:w-1/2 p-4 flex justify-center"><img class="w-3/4"
+              src="./Get Coach App_files/i-retail-1-3.png" alt="Two smartphones showcasing the Coach app"></div>
+        </div>
+      </div>
+      <div class="p-4 flex flex-col items-center justify-center py-12">
+        <h2 class="text-2xl font-bold mb-4 text-center py-12">Solve the Biggest Problems in Employee Training</h2>
+        <div class="flex flex-col items-start justify-center gap-24">
+          <div class="flex flex-col sm:flex-row items-center sm:items-start w-full justify-center gap-12">
+            <div class="flex flex-col-reverse sm:flex-row w-full sm:w-3/12 justify-end gap-2 sm:gap-4"
+              id="left-content">
+              <div class="flex flex-col items-center sm:items-end justify-center sm:text-right w-full sm:w-3/4">
+                <div class="sm:hidden"><img class="block w-[50px]" alt="person-question-mark"
+                    src="./Get Coach App_files/person-question-mark-80x80.png"></div>
+                <h3 class="text-lg font-bold text-center sm:text-right mb-2 flex items-center">Complex Material</h3>
+                <p class="text-gray-600 text-center sm:text-right">Employees struggle with dense content and training
+                  overload.</p>
+              </div>
+              <div class="w-full sm:w-[50px] hidden sm:block"><img class="block w-[50px]" alt="person-question-mark"
+                  src="./Get Coach App_files/person-question-mark-80x80.png"></div>
+            </div>
+            <div class="flex flex-row items-center w-[50px] rotate-90 sm:rotate-0"><img class="block w-full"
+                alt="arrow-right-sm" src="./Get Coach App_files/arrow-right-sm-80x80.png"></div>
+            <div class="flex flex-col-reverse sm:flex-row-reverse w-full sm:w-3/12 justify-end gap-2 sm:gap-4"
+              id="right-content">
+              <div class="flex flex-col items-center sm:items-start justify-center sm:text-left w-full sm:w-3/4">
+                <div class="sm:hidden"><img class="block w-[50px]" alt="docs"
+                    src="./Get Coach App_files/docs-80x80.png"></div>
+                <h3 class="text-lg font-bold text-center sm:text-left mb-2 flex items-center">MicroLessons for Faster
+                  Mastery</h3>
+                <p class="text-gray-600 text-center sm:text-left">Coach breaks down complex topics into
+                  easy-to-understand, bite-sized lessons, making it easier for employees to grasp and retain key
+                  details.</p>
+              </div>
+              <div class="w-full sm:w-[50px] hidden sm:block"><img class="block w-[50px]" alt="docs"
+                  src="./Get Coach App_files/docs-80x80.png"></div>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center sm:items-start w-full justify-center gap-12">
+            <div class="flex flex-col-reverse sm:flex-row w-full sm:w-3/12 justify-end gap-2 sm:gap-4"
+              id="left-content">
+              <div class="flex flex-col items-center sm:items-end justify-center sm:text-right w-full sm:w-3/4">
+                <div class="sm:hidden"><img class="block w-[50px]" alt="paragraph-x"
+                    src="./Get Coach App_files/paragraph-x-80x80.png"></div>
+                <h3 class="text-lg font-bold text-center sm:text-right mb-2 flex items-center">Constant Training Changes
+                </h3>
+                <p class="text-gray-600 text-center sm:text-right">Frequent updates make it challenging for employees to
+                  stay current.</p>
+              </div>
+              <div class="w-full sm:w-[50px] hidden sm:block"><img class="block w-[50px]" alt="paragraph-x"
+                  src="./Get Coach App_files/paragraph-x-80x80.png"></div>
+            </div>
+            <div class="flex flex-row items-center w-[50px] rotate-90 sm:rotate-0"><img class="block w-full"
+                alt="arrow-right-sm" src="./Get Coach App_files/arrow-right-sm-80x80.png"></div>
+            <div class="flex flex-col-reverse sm:flex-row-reverse w-full sm:w-3/12 justify-end gap-2 sm:gap-4"
+              id="right-content">
+              <div class="flex flex-col items-center sm:items-start justify-center sm:text-left w-full sm:w-3/4">
+                <div class="sm:hidden"><img class="block w-[50px]" alt="docs-ai"
+                    src="./Get Coach App_files/docs-ai-80x80.png"></div>
+                <h3 class="text-lg font-bold text-center sm:text-left mb-2 flex items-center">AI Powered Training
+                  Creation Tool</h3>
+                <p class="text-gray-600 text-center sm:text-left">Coach's AI-powered tool simplifies training updates,
+                  providing employees with the latest information in a short time.</p>
+              </div>
+              <div class="w-full sm:w-[50px] hidden sm:block"><img class="block w-[50px]" alt="docs-ai"
+                  src="./Get Coach App_files/docs-ai-80x80.png"></div>
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center sm:items-start w-full justify-center gap-12">
+            <div class="flex flex-col-reverse sm:flex-row w-full sm:w-3/12 justify-end gap-2 sm:gap-4"
+              id="left-content">
+              <div class="flex flex-col items-center sm:items-end justify-center sm:text-right w-full sm:w-3/4">
+                <div class="sm:hidden"><img class="block w-[50px]" alt="chart-down"
+                    src="./Get Coach App_files/chart-down-80x80.png"></div>
+                <h3 class="text-lg font-bold text-center sm:text-right mb-2 flex items-center">Low Engagement</h3>
+                <p class="text-gray-600 text-center sm:text-right">Traditional training often lacks engagement, leading
+                  to low completion rates.</p>
+              </div>
+              <div class="w-full sm:w-[50px] hidden sm:block"><img class="block w-[50px]" alt="chart-down"
+                  src="./Get Coach App_files/chart-down-80x80.png"></div>
+            </div>
+            <div class="flex flex-row items-center w-[50px] rotate-90 sm:rotate-0"><img class="block w-full"
+                alt="arrow-right-sm" src="./Get Coach App_files/arrow-right-sm-80x80.png"></div>
+            <div class="flex flex-col-reverse sm:flex-row-reverse w-full sm:w-3/12 justify-end gap-2 sm:gap-4"
+              id="right-content">
+              <div class="flex flex-col items-center sm:items-start justify-center sm:text-left w-full sm:w-3/4">
+                <div class="sm:hidden"><img class="block w-[50px]" alt="game-controller"
+                    src="./Get Coach App_files/game-controller-80x80.png"></div>
+                <h3 class="text-lg font-bold text-center sm:text-left mb-2 flex items-center">Gamification &amp;
+                  Interactive Learning</h3>
+                <p class="text-gray-600 text-center sm:text-left">Coach incorporates gamified elements, motivating
+                  employees to complete their training through points, rewards, and interactive games.</p>
+              </div>
+              <div class="w-full sm:w-[50px] hidden sm:block"><img class="block w-[50px]" alt="game-controller"
+                  src="./Get Coach App_files/game-controller-80x80.png"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex flex-col items-center">
+        <h2 class="w-full text-3xl bg-[#f5f6f6] font-bold mb-4 text-center py-24 rounded-t-4xl">A Proven Solution with
+          Real Results</h2>
+        <div class="flex flex-wrap justify-center py-12 shadow-md z-10 w-full">
+          <div class="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 p-4 text-center"><img class="mx-auto mb-2"
+              src="./Get Coach App_files/game-controller.svg" alt="Icon">
+            <p class="text-3xl font-bold">80%</p>
+            <p class="text-gray-600 uppercase font-bold">Employee Engagement Increase</p>
+          </div>
+          <div class="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 p-4 text-center"><img class="mx-auto mb-2"
+              src="./Get Coach App_files/clock.svg" alt="Icon">
+            <p class="text-3xl font-bold">90%</p>
+            <p class="text-gray-600 uppercase font-bold">Reduction in Training Preparation Time</p>
+          </div>
+          <div class="w-full md:w-1/3 lg:w-1/3 xl:w-1/3 p-4 text-center"><img class="mx-auto mb-2"
+              src="./Get Coach App_files/chart-up.svg" alt="Icon">
+            <p class="text-3xl font-bold">26%</p>
+            <p class="text-gray-600 uppercase font-bold">Total Knowledge Increase On Average</p>
+          </div>
+        </div>
+        <div class="w-full bg-[#f5f6f6] rounded-b-4xl py-12">
+          <p class="text-center text-gray-600 mb-4">Coach has received over 4,000+ positive reviews</p>
+          <div class="flex flex-wrap justify-center mb-4"><img class="h-12 mx-2"
+              src="./Get Coach App_files/neptun-dark.png" alt="Neptun"><img class="h-12 mx-2"
+              src="./Get Coach App_files/springwell-dark.png" alt="Springwell"><img class="h-12 mx-2"
+              src="./Get Coach App_files/evn-dark.png" alt="EVN"><img class="h-12 mx-2"
+              src="./Get Coach App_files/acibadem-dark.png" alt="Acibadem Sistina"><img class="h-12 mx-2"
+              src="./Get Coach App_files/sava-dark.png" alt="Sava"></div>
+          <div class="flex flex-col items-center gap-12 justify-center">
+            <div
+              class="w-full flex flex-col-reverse items-center sm:items-start sm:flex-row-reverse md:w-3/4 xl:w-1/2 px-12 md:px-4 gap-12">
+              <div
+                class="relative flex flex-col items-start mb-4 before:content-[&#39;“&#39;] before:text-gray-400 before: before:text-8xl before:leading-tight before:absolute before:-translate-y-1/4 before:-translate-x-full">
+                <p class="text-gray-600 italic">Coach is our study buddy that contributes to increasing sales knowledge,
+                  and enriches employees' skills in an innovative &amp; fun way, adding value for everyone.</p>
+                <div>
+                  <p class="text-lg font-bold">Daniela Karadakov</p>
+                  <p class="text-gray-400 font-bold">Training And Development Manager At Neptun</p>
+                </div>
+              </div><img class="rounded-full h-32 w-32 mr-4" src="./Get Coach App_files/testimonial-1.png"
+                alt="Daniela Karadakov">
+            </div>
+            <div
+              class="w-full flex flex-col-reverse items-center sm:items-start sm:flex-row md:w-3/4 xl:w-1/2 px-12 md:px-4 gap-12">
+              <div
+                class="relative flex flex-col items-start mb-4 before:content-[&#39;“&#39;] before:text-gray-400 before: before:text-8xl before:leading-tight before:absolute before:-translate-y-1/4 before:-translate-x-full">
+                <p class="text-gray-600 italic">The nurses at Acibadem Sistina have wholeheartedly adopted this new
+                  learning style. Within just a month, a healthy competitive spirit has emerged among the staff</p>
+                <div>
+                  <p class="text-lg font-bold">Androniki Bibovski</p>
+                  <p class="text-gray-400 font-bold">Nurse For Education And Training At Acibadem Sistina</p>
+                </div>
+              </div><img class="rounded-full h-32 w-32 mr-4" src="./Get Coach App_files/testimonial-2.png"
+                alt="Androniki Bibovski">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col items-center justify-center py-24 gap-12">
+        <h2 class="text-2xl font-bold mb-4 text-center">Unlock Efficiency and Growth with Coach</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-3/4 gap-12">
+          <div class="text-center flex flex-col items-center justify-center"><img class="mx-auto mb-2"
+              src="./Get Coach App_files/chart-up.svg" alt="Icon">
+            <h3 class="text-lg font-bold mb-2 w-3/4">Increase Performance</h3>
+            <p class="text-gray-600 w-3/4">Equip teams to handle complex knowledge confidently.</p>
+          </div>
+          <div class="text-center flex flex-col items-center justify-center"><img class="mx-auto mb-2"
+              src="./Get Coach App_files/clock.svg" alt="Icon">
+            <h3 class="text-lg font-bold mb-2 w-3/4">Reduce Training Preparation Time by 90%</h3>
+            <p class="text-gray-600 w-3/4">Free up resources with streamlined training creation and delivery.</p>
+          </div>
+          <div class="text-center flex flex-col items-center justify-center"><img class="mx-auto mb-2"
+              src="./Get Coach App_files/phone-rotate.svg" alt="Icon">
+            <h3 class="text-lg font-bold mb-2 w-3/4">Focus on What Matters</h3>
+            <p class="text-gray-600 w-3/4">With only 5-10 minutes a day, Coach keeps employees knowledgeable without
+              impacting their work.</p>
+          </div>
+          <div class="text-center flex flex-col items-center justify-center"><img class="mx-auto mb-2"
+              src="./Get Coach App_files/person-shadow.svg" alt="Icon">
+            <h3 class="text-lg font-bold mb-2 w-3/4">Scale Easily</h3>
+            <p class="text-gray-600 w-3/4">Train hundreds of employees across multiple locations, ensuring consistent
+              service and standards.</p>
+          </div>
+          <div class="text-center flex flex-col items-center justify-center"><img class="mx-auto mb-2"
+              src="./Get Coach App_files/chart-bar.svg" alt="Icon">
+            <h3 class="text-lg font-bold mb-2 w-3/4">Track Performance</h3>
+            <p class="text-gray-600 w-3/4">Use detailed KPIs to identify knowledge gaps, track progress, and receive
+              personalized training recommendations.</p>
+          </div>
+          <div class="text-center flex flex-col items-center justify-center"><img class="mx-auto mb-2"
+              src="./Get Coach App_files/aim.svg" alt="Icon">
+            <h3 class="text-lg font-bold mb-2 w-3/4">Fill in Knowledge Gaps</h3>
+            <p class="text-gray-600 w-3/4">Coach automatically identifies where employees need improvement and delivers
+              targeted lessons to fill in those gaps.</p>
+          </div>
+        </div>
+      </div>
+      <footer class="bg-gray-800 text-white pt-24 pb-24 rounded-t-4xl w-full p-4">
+        <div class="flex flex-col items-center justify-center gap-12">
+          <h1 class="text-2xl text-center">Join the companies already benefiting from smarter training with Coach.</h1>
+          <h2 class="text-2xl font-bold mb-4 text-center">Let's do better together.</h2>
+          <p class="text-lg mb-4 font-light text-center">Schedule a demo now and let us show you the full capability of
+            Coach Microlearning.</p><a class="text-lg text-yellow-500 hover:text-yellow-700"
+            href="https://www.getcoach.eu/">www.getcoach.eu</a>
+          <div class="flex flex-col items-center gap-4 w-1/3 h-fit">
+            <div
+              class="z-10 w-11/12 lg:w-5/12 fixed bottom-4 grid grid-cols-2 bg-gray-800 gap-4 justify-around items-center rounded-full border-2 border-yellow-500 p-4">
+              <div class="flex w-1/2 flex-1 w-full flex-col sm:flex-row items-center gap-4 sm:justify-end"><span
+                  class="text-sm uppercase hidden sm:block text-right">Brought to you by</span><img
+                  class="w-1/2 sm:w-3/12 md:2/12 lg:w-4/12 h-fit" src="/@/assets/fb-it-solutions-logo.png"
+                  alt="Future Bridge IT Solutions"></div>
+              <div class="flex flex-1 w-1/2 w-full justify-center items-center"><a
+                  class="bg-yellow-500 hover:opacity-80 text-white font-bold py-2 px-4 rounded-full mr-2 text-sm sm:text-md transition-all duration-200"
+                  href="https://calendly.com/getcoach-info" target="_blank">Book a Demo</a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+</body>
+
+</html>
